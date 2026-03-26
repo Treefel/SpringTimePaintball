@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12c47bca860445045b47a31fff2ab0da, type: 3}
+  m_Name: enemySpawner
+  m_EditorClassIdentifier: Assembly-CSharp::GameObjectList
+  gameObjects:
+  - {fileID: 4794871027151553372, guid: 80aeb918ea356bf4cb3a7c566d8ea856, type: 3}
+  - {fileID: 3538739840969468796, guid: aa02fec857fbc8447bd5a71dd9a7170c, type: 3}
+  - {fileID: 5049845914846443062, guid: 26a3ecd0a6dd93f42bc9d2a17b8f6578, type: 3}
+  - {fileID: 3971562012923187063, guid: 6a02517e193611f4fbdd39b7925f5f38, type: 3}
+  index: 0
+  OnListEmpty:
+    m_PersistentCalls:
+      m_Calls: []
+  OnListCountChange:
+    m_PersistentCalls:
+      m_Calls: []

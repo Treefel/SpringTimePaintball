@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b71fae6f49643748b4e884aeb07c2b1, type: 3}
+  m_Name: enemyInstancer
+  m_EditorClassIdentifier: Assembly-CSharp::Instancer
+  prefab: {fileID: 7324127268274265928, guid: f4534861020dd424bb3549a9606c1611, type: 3}
+  indexer: {fileID: 11400000, guid: 740a9b373fc2d24419780a02c10e0e35, type: 2}

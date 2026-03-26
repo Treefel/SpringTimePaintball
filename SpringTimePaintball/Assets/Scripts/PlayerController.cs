@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     private Vector3 velocity;
     private float verticalRotation = 0f;
+    public bool fired;
+
+    [SerializeField] private GameAction shoot;
 
     private void OnDisable()
     {
@@ -39,12 +42,25 @@ public class PlayerController : MonoBehaviour
             enabled = false;
             return;
         }
+
+        fired = false;
     }
 
     private void Update()
     {
         HandleMovement();
         HandleRotation();
+
+        if (Input.GetButton("Fire1") && !fired)
+        {
+            fired = true;
+            shoot.RaiseAction();
+        }
+    }
+
+    public void ResetFire()
+    {
+        fired = false;
     }
 
     private void HandleMovement()
