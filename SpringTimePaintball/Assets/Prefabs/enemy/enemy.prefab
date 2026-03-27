@@ -162,7 +162,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3, y: 0.3, z: 1}
+  m_Size: {x: 1.63, y: 0.3, z: 1}
   m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!65 &5888236050982025564
 BoxCollider:
@@ -183,8 +183,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9, y: 0.38, z: 1.01}
-  m_Center: {x: 0, y: -0.19, z: 0}
+  m_Size: {x: 1.25, y: 0.38, z: 1.01}
+  m_Center: {x: 0.1, y: -0.19, z: 0}
 --- !u!114 &6537902514379277787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +236,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.MeshCollider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   collisionEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -265,6 +277,18 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 5888236050982025564}
         m_TargetAssemblyTypeName: UnityEngine.BoxCollider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hit
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.MeshCollider, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:

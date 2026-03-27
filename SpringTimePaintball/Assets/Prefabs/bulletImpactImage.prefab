@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -1810340247363311436}
   - component: {fileID: -4256571446118450271}
   - component: {fileID: 8290404211320100749}
+  - component: {fileID: -9126085732492397582}
   m_Layer: 0
   m_Name: bulletImpactImage
   m_TagString: Untagged
@@ -144,7 +145,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1731979565002990246, guid: ae3dd37ddde854a96948ba563a338b3c, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 0e5ef99fe0e34a0459c658393c0d4e4d, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -230,3 +231,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-9126085732492397582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145315600898844434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac0e2a5da631354788fe833929d8e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioController
+  arraySounds: []
+  awakeSounds:
+  - {fileID: 8300000, guid: 0e5ef99fe0e34a0459c658393c0d4e4d, type: 3}
+  - {fileID: 8300000, guid: 9b3324e0297dcd14e8a32b370856c96c, type: 3}
