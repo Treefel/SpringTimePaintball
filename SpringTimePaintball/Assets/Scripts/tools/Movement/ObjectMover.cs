@@ -6,6 +6,7 @@ public class ObjectMover : MonoBehaviour
     {
         X,
         Y,
+        Z,
         Both
     }
 
@@ -30,6 +31,9 @@ public class ObjectMover : MonoBehaviour
             case MovementAxis.Y:
                 targetPosition.y = Mathf.PingPong(Time.time * speed, distance);
                 break;
+            case MovementAxis.Z:
+                targetPosition.z = Mathf.PingPong(Time.time * speed, distance);
+                break;
             case MovementAxis.Both:
                 targetPosition.x = Mathf.PingPong(Time.time * speed, distance);
                 targetPosition.y = Mathf.PingPong(Time.time * speed, distance);
@@ -38,5 +42,10 @@ public class ObjectMover : MonoBehaviour
 
         // Apply change to the transform 
         transform.position = targetPosition;
+    }
+
+    public void SetCurrentPosition(Vector3Data newPosition)
+    {
+        targetPosition = newPosition.value;
     }
 }
