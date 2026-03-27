@@ -23,7 +23,10 @@ public class PlayerController : MonoBehaviour
     private float verticalRotation = 0f;
     public bool fired;
 
+    private FootstepController footstepController;
+
     [SerializeField] private GameAction shoot;
+    
 
     private void OnDisable()
     {
@@ -33,6 +36,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        footstepController = GetComponentInChildren<FootstepController>(); // Get the FootstepController component
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         characterController = GetComponent<CharacterController>();
@@ -73,6 +78,15 @@ public class PlayerController : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
+
+        if (vertical != 0 || horizontal != 0)
+        {
+            footstepController.StartWalking();
+        }
+        else
+        {
+            footstepController.StopWalking();
+        }
 
         Vector3 moveDirection = transform.right * horizontal + transform.forward * vertical;
         moveDirection = Vector3.ClampMagnitude(moveDirection, 1f);
