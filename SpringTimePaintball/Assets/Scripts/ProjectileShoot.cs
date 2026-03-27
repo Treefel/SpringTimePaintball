@@ -1,4 +1,4 @@
-using System;
+// using System;
 using UnityEngine;
 public class ProjectileShoot : MonoBehaviour
 {
@@ -32,6 +32,9 @@ public class ProjectileShoot : MonoBehaviour
 
     [SerializeField] private GameObject bulletObj;
     [SerializeField] private GameObject bulletSpawn;
+
+    public AudioClip[] paintballSounds;
+    private AudioSource audioSource;
     // private Vector3 mousePos;
 
 
@@ -70,11 +73,17 @@ public class ProjectileShoot : MonoBehaviour
     //         rb.AddForce(Vector3.forward * forceValue, ForceMode.Impulse);
     //     }
     // }
+     private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>(); // Get the Audio Source component
+    }
 
     public void shoot()
     {
         Debug.Log("Shoot");
         GameObject bullet = Instantiate(bulletObj, bulletSpawn.transform.position, transform.rotation);
+        AudioClip paintballSound = paintballSounds[Random.Range(0, paintballSounds.Length)];
+        audioSource.PlayOneShot(paintballSound);
         bullet.GetComponent<Rigidbody>().AddForce(transform.forward * forceValue);
         Destroy(bullet, 5);
     }
