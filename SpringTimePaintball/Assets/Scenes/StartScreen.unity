@@ -1397,7 +1397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8327ca5ce18ed4725ae75f76e0f07d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleCoroutineBehaviour
-  seconds: 0.7
+  seconds: 0.65
   event:
     m_PersistentCalls:
       m_Calls: []
